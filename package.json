@@ -1,0 +1,60 @@
+{
+	"name": "@featventures/n8n-nodes-core",
+	"version": "0.1.0",
+	"description": "n8n nodes for CORE: read, create, update and search records, and start workflows when a record is created, updated or deleted.",
+	"license": "MIT",
+	"homepage": "https://github.com/featventures/n8n-nodes-core#readme",
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"core",
+		"crm",
+		"records"
+	],
+	"author": {
+		"name": "Feat.Dev",
+		"email": "dev@featventures.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/featventures/n8n-nodes-core.git"
+	},
+	"engines": {
+		"node": ">=20.15"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"test": "tsc -p tsconfig.test.json && node --test test/*.test.mjs",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/CoreApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/Core/Core.node.js",
+			"dist/nodes/CoreTrigger/CoreTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "0.54.6",
+		"@types/node": "^22.15.0",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^21.1.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
