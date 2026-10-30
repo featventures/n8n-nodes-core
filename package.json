@@ -1,6 +1,6 @@
 {
   "name": "@featventures/n8n-nodes-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n nodes for CORE: read, create, update and search records, and start workflows when a record is created, updated or deleted.",
   "license": "MIT",
   "homepage": "https://github.com/featventures/n8n-nodes-core#readme",
